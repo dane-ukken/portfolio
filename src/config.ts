@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Sat Naing",
   profile: "https://dane-ukken.dev/",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
-  title: "dane-ukken.dev",
+  title: "Hi, I am Dane Ukken!",
   ogImage: "unofficial_pic.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -21,8 +21,8 @@ export const LOCALE = {
 export const LOGO_IMAGE = {
   enable: true,
   svg: false,
-  width: 46,
-  height: 46,
+  width: 50,
+  height: 50,
 };
 
 export const SOCIALS: SocialObjects = [
