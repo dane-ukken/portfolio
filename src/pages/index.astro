@@ -54,7 +54,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             ></path>
           </svg>
         </LinkButton>
-        {
+        { false &&
           // only display if at least one social link is enabled
           socialCount > 0 && (
             <div class="social-wrapper">
@@ -67,7 +67,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       
     </section>
 
-    <Hr />
 
     {
       false && featuredPosts.length > 0 && (
@@ -109,6 +108,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
+    { false &&
+
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/projects/">
         All Projects
@@ -119,7 +120,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </svg>
       </LinkButton>
     </div>
-  </main>
+    }
+</main>
 
   <Footer />
 </Layout>
