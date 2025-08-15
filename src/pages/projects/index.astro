@@ -1,0 +1,131 @@
+---
+// Import your React components
+import Breadcrumbs from "@components/Breadcrumbs.astro";
+import ProjectCard from '../../components/ProjectCard.jsx';
+import ProjectList from '../../components/ProjectList.jsx';
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+// You can fetch data here
+export const projects = [
+
+
+  {
+    heading: "Projects",
+    title: "Secure It – Encrypted File System",
+    href: "https://github.com/dane-ukken/secure-it",
+    description:
+      "Java — Jan 2024. Encrypted file system implementing AES-CTR for confidentiality and HMAC for integrity; robust key handling and authenticated metadata.",
+    owner: "dane-ukken",
+    repo: "secure-it-encrypted-fs",
+    repoDescription:
+      "Java file system layer with AES-CTR encryption and HMAC verification. CLI utilities and test suite included.",
+    repoStats: { contributors: 1, issues: 0, stars: 0, forks: 0 },
+    repoIcon:
+      "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+    languageBar: [
+      { label: "Java", percent: 90 },
+      { label: "Shell", percent: 5 },
+      { label: "Other", percent: 5 }
+    ],
+    tags: ["Java", "AES-CTR", "HMAC", "Security", "Crypto", "CLI"]
+  },
+
+  {
+    heading: "Projects",
+    title: "Planet – Event Planner",
+    href: "https://github.com/dane-ukken/planet-meetup",
+    description:
+      "React, Next.js, Redux, Passport.js, MongoDB, Jest, Docker — Dec 2023. Role-based auth for organizer workflows, user-specific actions, and enhanced attendee engagement.",
+    owner: "dane-ukken",
+    repo: "planet-event-planner",
+    repoDescription:
+      "Next.js event planning app with Passport.js authentication, Redux state, MongoDB data layer, and Jest tests. Dockerized for deployment.",
+    repoStats: { contributors: 1, issues: 0, stars: 0, forks: 0 },
+    repoIcon:
+      "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+    languageBar: [
+      { label: "TypeScript", percent: 70 },
+      { label: "JavaScript", percent: 10 },
+      { label: "Dockerfile", percent: 10 },
+      { label: "Other", percent: 10 }
+    ],
+    tags: [
+      "React",
+      "Next.js",
+      "Redux",
+      "Passport.js",
+      "MongoDB",
+      "Jest",
+      "Docker"
+    ]
+  },
+
+  {
+    heading: "Projects",
+    title: "Medical Named Entity Recognition – BERT",
+    href: "https://github.com/dane-ukken/Medical-NER",
+    description:
+      "Python, PyTorch — May 2024. Developed a Medical NER model using pre-trained BERT/ALBERT with 1,000+ downloads. Achieved F1 = 0.8726 by fine-tuning on the i2b2/n2c2 clinical notes dataset.",
+    owner: "dane-ukken",
+    repo: "medical-ner-bert",
+    repoDescription:
+      "Production-ready Medical NER (BERT/ALBERT + PyTorch). Training & inference pipelines, evaluation, and packaging.",
+    repoStats: { contributors: 1, issues: 0, stars: 0, forks: 0 },
+    repoIcon:
+      "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+    languageBar: [
+      { label: "Python", percent: 82 },
+      { label: "Jupyter", percent: 8 },
+      { label: "Other", percent: 10 }
+    ],
+    tags: ["Python", "PyTorch", "BERT", "ALBERT", "HuggingFace", "NER"]
+  },
+];
+
+---
+<Layout>
+  <Header />
+  <Breadcrumbs />
+  <br/>
+
+  <section id="Projects" class="prose mb-28 max-w-3xl prose-img:border-0">
+    <h1 class="text-2xl tracking-wider sm:text-3xl">Projects</h1>
+   <!-- You can also use individual React components -->
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column", // makes children flow top-to-bottom
+        gap: "2rem",             // spacing between cards
+      maxWidth: "700px", margin: "0 auto"
+      }},
+
+  >
+    {projects.map((p) => (
+      <ProjectCard  {...p} />
+    ))}
+  </div>
+  </section>
+  <Footer />
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+
+  .project-list-container {
+    width: 100%;
+  }
+
+  /* Keep the original project-grid class for backward compatibility */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
