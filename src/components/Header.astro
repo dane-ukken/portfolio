@@ -56,10 +56,10 @@ const { activeNav } = Astro.props;
           </svg>
         </button>
         <ul id="menu-items" class="display-none sm:flex">
-          { false &&
+          {
             <li>
-              <a href="/posts/" class={activeNav === "posts" ? "active" : ""}>
-                Posts
+              <a href="/projects/" class={activeNav === "projects" ? "active" : ""}>
+                Projects
               </a>
             </li>
           }
@@ -89,7 +89,7 @@ const { activeNav } = Astro.props;
             </LinkButton>
           </li>
           }
-          {
+          { false &&
             SITE.lightAndDarkMode && (
               <li>
                 <button

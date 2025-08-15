@@ -36,7 +36,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </p>      
       <br>
       <p>
-        My experience at Fidelity Investments has sharpened my ability to streamline processes, develop innovative features, and contribute significantly to complex projects. During my internship at Resi Media, I further refined my front-end skills, enhancing user interfaces with React JS and improving overall code quality.
+        At Fidelity Investments, I worked on complex, large-scale projects that required optimizing ETL pipelines and developing new microservices for critical business integrations. At Pushpay, I contributed to high-availability video streaming systems, leveraging Cloudflare Workers and event-driven design to deliver reliable, low-latency experiences to a global user base. As one of three senior engineers at Holiday Channel, a fast-paced startup, I played a key role in guiding the initial website launch, driving high output across independent workstreams, and providing technical direction that shaped the team’s execution.
       </p>
         
       <br>
@@ -46,14 +46,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <br>
 
       <div class="me-6 flex flex-wrap items-end justify-between gap-x-4 gap-y-8">
-        <LinkButton href="/Resume_DaneUkken.pdf">
-          Resume
+        <LinkButton href="/Resume_DaneUkken.pdf" target="_blank">
+          <strong>Resume</strong>
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
               d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
             ></path>
           </svg>
         </LinkButton>
+
+
+
         { false &&
           // only display if at least one social link is enabled
           socialCount > 0 && (
@@ -64,6 +67,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           )
         }
       </div>
+      <br/>
+      <img src="/qr-code.png" style="width: 25%">
       
     </section>
 
