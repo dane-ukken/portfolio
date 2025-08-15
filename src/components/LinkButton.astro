@@ -5,6 +5,8 @@ export interface Props {
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
+  target?: "_blank" | "_self" | "_parent" | "_top";
+  rel?: string;
 }
 
 const {
@@ -13,6 +15,7 @@ const {
   ariaLabel,
   title,
   disabled = false,
+  target = "_self",
 } = Astro.props;
 ---
 
@@ -28,6 +31,7 @@ const {
   ) : (
     <a
       {href}
+      target={target}
       class:list={["group inline-block hover:text-skin-accent", className]}
       aria-label={ariaLabel}
       title={title}
