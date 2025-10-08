@@ -2,7 +2,7 @@ import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
   website: "https://dane-ukken.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
+  author: "Dane Ukken",
   profile: "https://dane-ukken.dev/",
   desc: "A minimal, responsive and SEO-friendly Astro blog theme.",
   title: "Hi, I am Dane Ukken!",
