@@ -13,7 +13,7 @@ function getPreferTheme() {
   // return user device's prefer color scheme
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
-    : "light";
+    : "dark";
 }
 
 let themeValue = getPreferTheme();
@@ -56,7 +56,7 @@ window.onload = () => {
 
     // now this script can find and listen for clicks on the control
     document.querySelector("#theme-btn")?.addEventListener("click", () => {
-      themeValue = themeValue === "light" ? "dark" : "light";
+      themeValue = themeValue === "light" ? "dark" : "dark";
       setPreference();
     });
   }
@@ -71,6 +71,6 @@ window.onload = () => {
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", ({ matches: isDark }) => {
-    themeValue = isDark ? "dark" : "light";
+    themeValue = isDark ? "dark" : "dark";
     setPreference();
   });
